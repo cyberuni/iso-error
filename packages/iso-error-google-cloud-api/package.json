@@ -71,6 +71,6 @@
 		"iso-error": ">= 4"
 	},
 	"engines": {
-		"node": ">= 8"
+		"node": ">= 20"
 	}
 }
