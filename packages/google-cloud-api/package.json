@@ -59,7 +59,7 @@
 	},
 	"dependencies": {
 		"iso-error": "workspace:^",
-		"type-plus": "8.0.0-beta.10"
+		"type-plus": "8.0.0-beta.11"
 	},
 	"devDependencies": {
 		"@redocly/cli": "^2.49.0",
