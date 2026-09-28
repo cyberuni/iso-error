@@ -1,4 +1,3 @@
-import { canAssign } from 'type-plus'
 import type { rpc } from './index.js'
 
 describe('rpc.Status', () => {
@@ -24,29 +23,29 @@ describe('rpc.Status', () => {
 			]
 		}
 
-		canAssign<rpc.Status>()(json)
+		json satisfies rpc.Status
 	})
 })
 
 describe('rpc.CauseInfo', () => {
 	it('requires message but causes is optional', () => {
-		canAssign<rpc.CauseInfo>()({
+		;({
 			'@type': 'google-cloud-api/CauseInfo',
 			message: ''
-		})
+		}) satisfies rpc.CauseInfo
 	})
 	it('accepts an array of causes', () => {
 		// eventthough `error-cause` turns out to be singular,
 		// making `causes` singular creates inconsistent data structure.
 
-		canAssign<rpc.CauseInfo>()({
+		;({
 			'@type': 'google-cloud-api/CauseInfo',
 			message: '',
 			causes: []
-		})
+		}) satisfies rpc.CauseInfo
 	})
 	it('accepts nested causes', () => {
-		canAssign<rpc.CauseInfo>()({
+		;({
 			'@type': 'google-cloud-api/CauseInfo',
 			message: '',
 			causes: [
@@ -55,10 +54,10 @@ describe('rpc.CauseInfo', () => {
 					causes: [{ message: '' }]
 				}
 			]
-		})
+		}) satisfies rpc.CauseInfo
 	})
 	it('can contain module', () => {
-		canAssign<rpc.CauseInfo>()({
+		;({
 			'@type': 'google-cloud-api/CauseInfo',
 			message: '',
 			causes: [
@@ -68,6 +67,6 @@ describe('rpc.CauseInfo', () => {
 					causes: [{ message: '' }]
 				}
 			]
-		})
+		}) satisfies rpc.CauseInfo
 	})
 })

@@ -1,5 +1,5 @@
 import { a } from 'assertron'
-import { isType, omit } from 'type-plus'
+import { omit, testType } from 'type-plus'
 import { IsoError, ModuleError } from './index.js'
 import { createError, MikuSickError, MyModuleError, SubError } from './testErrors.js'
 
@@ -131,7 +131,7 @@ describe('ModuleError', () => {
 	})
 
 	it('exposes ModuleError.Options', () => {
-		isType.equal<true, IsoError.Options, ModuleError.Options>()
+		testType.equal<IsoError.Options, ModuleError.Options>(true)
 	})
 })
 
