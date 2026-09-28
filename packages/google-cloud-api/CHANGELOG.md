@@ -1,5 +1,15 @@
 # google-cloud-api
 
+## 8.0.1
+
+### Patch Changes
+
+- 2ef1e4a: Bump `type-plus` to `8.0.0-beta.12`, still pinned exactly.
+  
+  `google-cloud-api` carries `type-plus` as a runtime dependency. Its emitted `.d.ts` does not
+  reference `type-plus`, so consumers see no type change. Its runtime use (`isType` with a
+  validator, `required`) is unchanged in beta.12.
+
 ## 8.0.0
 
 ### Major Changes
