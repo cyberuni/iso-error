@@ -52,7 +52,7 @@ overrides:
   # GHSA advisories on ReDoS in brace expansion (dev: glob chains under depcheck,
   # rimraf and vitest).
   brace-expansion@1: ^1.1.18
-  brace-expansion@2: ^2.1.4
+  brace-expansion@2: ^5.0.0
   brace-expansion@>=4: ^5.0.9
   # Prototype-pollution and code-execution advisories (dev: depcheck, redocly).
   js-yaml@3: ^3.15.1
