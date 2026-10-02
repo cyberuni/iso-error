@@ -62,7 +62,7 @@ overrides:
   # Host confusion via failed IDN canonicalization (dev: commitlint -> ajv).
   fast-uri@3: ^3.1.5
   # Non-uniform id generation (dev: depcheck -> postcss).
-  nanoid@3: ^3.3.18
+  nanoid@3: ^6.0.0
   postcss@8: ^8.5.23
 
 allowBuilds:
