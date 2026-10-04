@@ -57,7 +57,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^26.4.0",
-		"@vitest/coverage-v8": "^4.1.11",
+		"@vitest/coverage-v8": "^5.0.0",
 		"assertron": "^11.7.0",
 		"depcheck": "^1.4.7",
 		"iso-error": "workspace:^",
@@ -65,7 +65,7 @@
 		"rimraf": "^6.1.3",
 		"tsdown": "^0.23.0",
 		"typescript": "^7.0.2",
-		"vitest": "^4.1.11"
+		"vitest": "^5.0.0"
 	},
 	"peerDependencies": {
 		"iso-error": ">= 4"
