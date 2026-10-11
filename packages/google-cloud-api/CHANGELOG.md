@@ -1,5 +1,21 @@
 # google-cloud-api
 
+## 9.0.0
+
+### Major Changes
+
+- f7b6d68: Make `google-cloud-api` ESM only, following `type-plus@8`.
+  The `cjs/` build and the `require` export condition are removed, and `main` now points at `esm/index.js`.
+  
+  Migration: the package needs Node `^20.19.0 || >=22.12.0`.
+  On those versions `require('google-cloud-api')` keeps working, because Node loads ES modules through `require()` without a flag.
+  On older Node, use `import` or upgrade Node.
+
+### Patch Changes
+
+- 4c368f2: Drop the runtime dependency on `type-plus`.
+  The two helpers it used are inlined, so the CJS build no longer requires the ESM-only `type-plus@8`.
+
 ## 8.0.1
 
 ### Patch Changes
