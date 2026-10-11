@@ -19,22 +19,13 @@
 	"type": "module",
 	"exports": {
 		".": {
-			"import": {
-				"types": "./esm/index.d.ts",
-				"default": "./esm/index.js"
-			},
-			"require": {
-				"types": "./cjs/index.d.ts",
-				"default": "./cjs/index.js"
-			},
+			"types": "./esm/index.d.ts",
 			"default": "./esm/index.js"
 		}
 	},
-	"main": "./cjs/index.js",
-	"module": "./esm/index.js",
+	"main": "./esm/index.js",
 	"types": "./esm/index.d.ts",
 	"files": [
-		"cjs",
 		"esm",
 		"ts",
 		"!**/*.{spec,test,unit,accept,integrate,system,perf,stress}.*",
@@ -45,7 +36,7 @@
 		"build": "tsdown",
 		"build:docs": "redocly build-docs",
 		"build:watch": "tsdown --watch",
-		"clean": "rimraf coverage cjs esm --glob *.tsbuildinfo",
+		"clean": "rimraf coverage esm --glob *.tsbuildinfo",
 		"coverage": "vitest run --coverage",
 		"depcheck": "depcheck",
 		"dev": "redocly preview-docs",
@@ -75,6 +66,6 @@
 		"vitest": "^5.0.0"
 	},
 	"engines": {
-		"node": ">= 20"
+		"node": "^20.19.0 || >=22.12.0"
 	}
 }
