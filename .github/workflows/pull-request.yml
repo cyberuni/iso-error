@@ -3,6 +3,10 @@ on:
   pull_request:
     types: [opened, synchronize]
   merge_group:
+  # The release job opens the Version Packages PR with the built-in GITHUB_TOKEN, whose
+  # events start no workflows. It dispatches this workflow on the PR's branch instead,
+  # so the required `code / all-checks` reports there.
+  workflow_dispatch:
 
 jobs:
   code:
