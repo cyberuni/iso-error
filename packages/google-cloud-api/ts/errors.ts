@@ -1,7 +1,16 @@
 import { type IsoError, isAggregateError, ModuleError } from 'iso-error'
-import { isType, required } from 'type-plus'
 import { codeName } from './rpc/Code.js'
 import type { rpc } from './rpc/index.js'
+
+// Shallow merge, later sources win. Inlined from `type-plus` so the runtime
+// (including the CJS build) does not depend on it.
+function required<A extends object, B extends object | undefined, C extends object>(
+	a: A,
+	b: B,
+	c: C
+): A & NonNullable<B> & C {
+	return { ...a, ...b, ...c } as A & NonNullable<B> & C
+}
 
 export interface ErrorOptions<D extends rpc.Detail[] = rpc.Detail[]> extends IsoError.Options {
 	message?: string
@@ -64,7 +73,7 @@ function toCauses(error: Error): {
 	const message = `${error.name}: ${error.message}`
 	const module = error instanceof GoogleCloudApiError ? error.module : undefined
 	const cause = error.cause
-	if (isType<Error>(cause, (s) => s instanceof Error)) {
+	if (cause instanceof Error) {
 		if (isAggregateError(cause)) {
 			return {
 				message,

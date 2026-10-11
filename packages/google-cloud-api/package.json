@@ -58,19 +58,19 @@
 		"watch": "vitest"
 	},
 	"dependencies": {
-		"iso-error": "workspace:^",
-		"type-plus": "8.0.0-beta.12"
+		"iso-error": "workspace:^"
 	},
 	"devDependencies": {
 		"@redocly/cli": "^2.49.0",
 		"@types/node": "^26.4.0",
 		"@vitest/coverage-v8": "^5.0.0",
-		"assertron": "^11.7.0",
+		"assertron": "^11.7.1",
 		"depcheck": "^1.4.7",
 		"npm-run-all2": "^9.0.3",
 		"rimraf": "^6.1.3",
-		"satisfier": "^5.4.5",
+		"satisfier": "^5.4.6",
 		"tsdown": "^0.23.0",
+		"type-plus": "8.0.0",
 		"typescript": "^7.0.2",
 		"vitest": "^5.0.0"
 	},

@@ -1,5 +1,6 @@
 import { a } from 'assertron'
-import { omit, testType } from 'type-plus'
+import { omit } from 'type-plus'
+import { testType } from 'type-plus/testing'
 import { IsoError, ModuleError } from './index.js'
 import { createError, MikuSickError, MyModuleError, SubError } from './testErrors.js'
 
