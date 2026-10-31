@@ -1,5 +1,11 @@
 # iso-error
 
+## 7.0.1
+
+### Patch Changes
+
+- 5a8b190: Include `CHANGELOG.md` in the published package.
+
 ## 7.0.0
 
 ### Major Changes

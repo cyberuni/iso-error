@@ -1,6 +1,6 @@
 {
 	"name": "iso-error",
-	"version": "7.0.0",
+	"version": "7.0.1",
 	"description": "An isomorphic error library",
 	"homepage": "https://github.com/cyberuni/iso-error/tree/main/packages/iso-error",
 	"bugs": {
