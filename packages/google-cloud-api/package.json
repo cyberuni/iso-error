@@ -30,7 +30,8 @@
 		"ts",
 		"!**/*.{spec,test,unit,accept,integrate,system,perf,stress}.*",
 		"!**/test-utils",
-		"open_api"
+		"open_api",
+		"CHANGELOG.md"
 	],
 	"scripts": {
 		"build": "tsdown",
