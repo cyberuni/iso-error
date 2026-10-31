@@ -1,5 +1,11 @@
 # google-cloud-api
 
+## 9.0.1
+
+### Patch Changes
+
+- 5a8b190: Include `CHANGELOG.md` in the published package.
+
 ## 9.0.0
 
 ### Major Changes
